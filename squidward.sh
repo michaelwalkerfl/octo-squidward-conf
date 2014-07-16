@@ -72,3 +72,6 @@ for i in `ifconfig | awk -F "[: ]+" '/inet addr:/ { if ($4 != "127.0.0.1") print
      ((sed_count++))
      ((ip_count++))
 done
+
+# Restart squid
+service squid restart
